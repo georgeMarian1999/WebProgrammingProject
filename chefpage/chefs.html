@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<script src="https://kit.fontawesome.com/97b9573b54.js" crossorigin="anonymous"></script>
+<html lang="en">
+   <head>
+      <link rel="stylesheet" href="../style.css">
+      <link rel="stylesheet" href="chefs.css">
+      <link rel="stylesheet" href="../homepage/home.css">
+      <script type="text/javascript" src="../script.js"></script>
+      <title>
+         Chefs
+      </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   </head>
+   <body class="chefpage">
+      <header>
+         <nav id="navigation">
+            <a class="closeButton" href="javascript:void(0)"  onclick="closeMenu()"><i  class="fas fa-times"></i></a>
+            <a  href="../homepage/home.html"><i class="fas fa-home"><p class="p3"> Home</p></i> </a>
+            <a class="crtpage" href="chefs.html"><i class="fas fa-utensils"> <p class="p3">Our chefs</p></i> </a>
+            <a href="../loginpage/login.html"><i class="fas fa-sign-out-alt"><p class="p3">Logout</p> </i></a>
+            <a href="../signuppage/signup.html"><i class="far fa-user-circle"> <p class="p3">Register</p></i></a>
+         </nav>
+         <a class="menuButton" href="javascript:void()" onclick="openMenu()"><i class="fas fa-bars"></i></a>
+      </header>
+      <main>
+         <article class="introduction">
+            <header><h1><p class="p3" >Best of chefs!</p></h1></header>
+            <div class="intro">
+            <p class="p3" style="color: white;">
+               <strong>
+               Here you can find our chefs. Most professional and dedicated chefs out there!
+            </p>
+            </strong>
+            </div>
+          </article>   
+          <article class="content">
+             <header><h1><p class="p3">Top chefs around the world!</p></h1></header>
+            <div class="slider">
+               <input type="radio" name="slideswitch" id="id1" checked="checked"/>
+               <label for="id1">
+                  <img src="../images/mauro.jpeg" width="100"/>
+                  <p class="p3">Mauro </p>
+                  <p class="p3">Colagreco</p>
+               </label>
+               <img src="../images/mauro.jpeg"/>
+               
+               <input type="radio" name="slideswitch" id="id2" />
+               <label for="id2">
+                  <img src="images/christophe.jpeg" width="100"/>
+                  <p class="p3">Christophe</p>
+                  <p class="p3">Bacquié</p>
+                  
+               </label>
+               <img src="../images/christophe.jpeg"/>
+               
+               <input type="radio" name="slideswitch" id="id3"/>
+               <label for="id3">
+                  <img src="../images/arnaud.jpeg" width="100"/>
+                  <p class="p3">Arnaud</p>
+               <p class="p3">Donckele</p>
+               </label>
+               <img src="../images/arnaud.jpeg"/>
+            
+            </div>     
+          </article>
+      <article class="content">
+        <h1><p class="p3" style="color: black;">Our <span title="Certified Professional Chefs">CPC</span> chefs</p></h1>
+        <table class="cheftable" id="chefTable">
+           <thead>
+           <tr>
+              <th>Photo</th>
+              <th><button onclick="sortTable('chefTable',2)" class="sortButton">Added recipes</button></th>
+              <th>Phone number</th>
+              <th>Website</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+              <td>
+               <div class="container">
+                  <img src="../images/scarlatescu.jpeg" alt="Avatar" class="image">
+                  <div class="overlay">
+                    <div class="text">Scarlatescu</div>
+                  </div>
+                </div>
+              </td>
+              <td>14</td>
+              <td>0738463825</td>
+              <td><a target="_blank" href="https://www.facebook.com/CatalinScarlatescu/"><i class="fas fa-link"></i></a></td>
+           </tr>
+           <tr>
+              <td>
+                 <div class="container">
+                  <img src="../images/Jamila.jpeg" alt="Avatar" class="image">
+                  <div class="overlay">
+                     <div class="text">Jamila</div>
+                  </div>
+                 </div>
+            </td>
+             <td>10</td>
+              <td>
+                 0636529384
+              </td>
+              <td>
+               <a target="_blank" href="https://jamilacuisine.ro/"><i class="fas fa-link"></i></a>
+              </td>
+           </tr>
+           <tr>
+            <td>
+               <div class="container">
+             <img src="../images/ratata.jpeg" alt="Avatar" class="image">
+             <div class="overlay">
+               <div class="text">Ratatouille</div>
+             </div>
+           </div></td>
+           <td>20</td>
+            <td>
+               0745674432
+            </td>
+            <td>
+             <a target="_blank" href="https://www.rottentomatoes.com/m/ratatouille"><i class="fas fa-link"></i></a>
+            </td>
+         </tr>
+      </tbody>
+        </table>
+     </article>
+   </main>
+   <footer class="homepagefooter">
+      <p>Author: George Marian <br>
+      <p>All rigths reserved<br>
+         <a href="mailto:mariangeorge99@icloud.com">mariangeorge99@icloud.com</a>
+      </p>
+   </footer>
+   </body>
+   </html>

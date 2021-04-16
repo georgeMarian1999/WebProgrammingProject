@@ -1,0 +1,178 @@
+:root {
+  --button-color: #f77062;
+
+  --red-color: #0fd77f;
+}
+main {
+  font-family: "Lobster", cursive;
+  min-height: 100vh;
+  font-size: 20px;
+  background: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.glass {
+  background: white;
+  min-height: 85vh;
+  width: 60%;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.information,
+.personal,
+.terms {
+  flex: 0.25;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+#signupback {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  right: 0;
+  bottom: 0;
+  /* object-fit: cover; */
+}
+#validatedemail,
+#validatefname,
+#validatelname,
+#validatephone,
+#validatedate {
+  display: none;
+}
+#show,
+#hide,
+#showconfirm,
+#hideconfirm {
+  cursor: pointer;
+}
+#button {
+  fill: var(--button-color);
+}
+#Polygon3,
+#Polygon1,
+#Polygon2 {
+  transition: all 1s ease;
+}
+.inputWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#Polygon3 {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+svg:hover #Polygon1 {
+  transform: translateX(20%);
+}
+svg:hover #Polygon2 {
+  opacity: 0;
+  transform: translateX(40%);
+}
+svg:hover #Polygon3 {
+  opacity: 1;
+  transform: translateX(0);
+}
+.form {
+  padding-top: 1rem;
+  flex: 2;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
+}
+.auxiliar {
+  display: flex;
+  width: 100%;
+  animation: fade 1s ease;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+/* .personalform,
+.termsform {
+  display: none;
+}
+.personal,
+.terms {
+  display: none;
+} */
+.information,
+.terms,
+.informationform,
+.termsform {
+  display: none;
+}
+h1 {
+  animation: fade 1s ease;
+}
+@keyframes fade {
+  from {
+    transform: scale(0.5);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form .informationform,
+.personalform,
+.termsform {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+label {
+  margin: 5px;
+}
+input[type="text"],
+input[type="password"] {
+  border: 0;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  width: 80%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  /* border-radius: 2rem; */
+}
+.buttonwrapper {
+  opacity: 1.2;
+  position: absolute;
+  bottom: 2%;
+}
+button {
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+svg {
+  cursor: pointer;
+}

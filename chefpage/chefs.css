@@ -1,0 +1,174 @@
+body.chefpage {
+  width: 100%;
+  /* height: 400px; */
+  background-image: url(../images/chefbackground.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: block;
+}
+.container {
+  position: relative;
+  width: 30%;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    text-align: right;
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  table.recipetable td:nth-of-type(1):before {
+    content: "Recipe";
+  }
+  table.recipetable td:nth-of-type(2):before {
+    content: "Cook time(min)";
+  }
+  table.recipetable td:nth-of-type(3):before {
+    content: "Chef";
+  }
+  table.recipetable td:nth-of-type(4):before {
+    content: "Category";
+  }
+  table.recipetable td:nth-of-type(5):before {
+    content: "Link";
+  }
+  table.cheftable td:nth-of-type(1):before {
+    content: "Photo";
+  }
+  table.cheftable td:nth-of-type(2):before {
+    content: "Phone number";
+  }
+  table.cheftable td:nth-of-type(3):before {
+    content: "Website";
+  }
+}
+
+.slider {
+  width: 600px;
+  position: relative;
+  /*Padding in loc de height*/
+  padding-top: 320px; /*Pune pozele mici jos*/
+
+  margin-left: 20px;
+  margin-top: 20px;
+
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+/*Last thing remaining is to add transitions*/
+.slider > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.slider input[name="slideswitch"] {
+  display: none;
+}
+
+.slider label {
+  /* spatiere */
+  margin: 18px 0 0 18px;
+  border: 3px solid #999;
+  background-color: white;
+  float: left;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  opacity: 0.6;
+}
+
+.slider label img {
+  display: block;
+}
+
+.slider input[name="slideswitch"]:checked + label {
+  border-color: bisque;
+  opacity: 1;
+}
+/*Daca se face click pe o imagine mica i se schimba opacitatea*/
+
+.slider input[name="slideswitch"] ~ img {
+  opacity: 0;
+  transform: scale(1.1);
+}
+/*By default toate imaginile sunt una peste alta doar ca au opacitate 0 si size 110%
+*/
+.slider input[name="slideswitch"]:checked + label + img {
+  opacity: 1;
+  transform: scale(1);
+}
+/*Cand se face click pe o imagine mica imaginea care este fiu al elementului input isi va face opacitatea 1*/

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<script src="https://kit.fontawesome.com/97b9573b54.js" crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <script type="text/javascript" src="./signupscript2.js"></script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="signup2.css">
+  <title>Sign up</title>
+</head>
+<body>
+  <!-- <video autoplay muted loop id="signupback">
+    <source src="../videos/Philippine spices.mp4" type="video/mp4">
+  </video> -->
+  <main>
+    <section class="glass">
+      <div class="information">
+        <h1>Login information</h1>
+      </div>
+      <div class="personal">
+        <h1>Personal details</h1>
+      </div> 
+       <div class="terms">
+        <h1>Terms of conditions</h1>
+      </div>
+      <div class="form"> 
+        <form action="confirmationSignup.html" method="post">
+          <div class="informationform">
+            <div class="auxiliar">
+            <label for="email">Email:</label>
+              <div class="inputWrapper">
+                <input onchange="validateLoginInformation()" size="60" placeholder="example@mail.com" type="text" id="email" name="email" maxlength=40>
+                <i class="fas fa-check-circle" id="validatedemail" style="color: green;"></i>
+                <i class="fas fa-times-circle" id="nonvalidatedemail" style="color: red;"></i>
+              </div>  
+              <label for="pass">Password:</label>
+              <div class="inputWrapper">
+                <input size="50" onchange="validateLoginInformation()" placeholder="New password" type="password" id="pass" name="pass" maxlength=40>
+                <i class="fas fa-eye" onclick="showPassword()" id="show" style="color: red;" ></i>
+                <i class="fas fa-eye-slash" onclick="hidePassword()" id="hide" style="display: none; color: red;"></i>
+              </div>
+              <label for="confirmpass">Confirm Password:</label>
+              <div class="inputWrapper">
+                <input size="50" onchange="validateLoginInformation()" placeholder="New password" type="password" id="confirmpass" name="confirmpass" maxlength=40>
+                <i class="fas fa-eye" onclick="showConfirmPassword()" id="showconfirm" style="color: red;" ></i>
+                <i class="fas fa-eye-slash" onclick="hideConfirmPassword()" id="hideconfirm" style="display: none; color: red;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="personalform">
+            <div class="auxiliar">
+              <label for="fname">First name:</label>
+              <div class="inputWrapper">
+                <input onchange="validatePersonalInformation()" size="50" type="text" id="fname" name="fname" >
+                <i class="fas fa-check-circle" id="validatefname" style="color: green;"></i>
+                <i class="fas fa-times-circle" id="nonvalidatefname" style="color: red;"></i>
+              </div>
+            
+              <label for="lname">Last name:</label>
+              <div class="inputWrapper">
+                <input onchange="validatePersonalInformation()" size="50" type="text" id="lname" name="lname" >
+                <i class="fas fa-check-circle" id="validatelname" style="color: green;"></i>
+                <i class="fas fa-times-circle" id="nonvalidatelname" style="color: red;"></i>
+              </div>
+              
+              <label for="phone">Phone number:</label>
+              <div class="inputWrapper">
+                <input onchange="validatePersonalInformation()" type="text" id="phone" name="phone">
+                <i class="fas fa-check-circle" id="validatephone" style="color: green;"></i>
+                <i class="fas fa-times-circle" id="nonvalidatephone" style="color: red;"></i>
+              </div>
+              <label for="date">Date of birth:</label>
+              <div class="inputWrapper">
+                <input onchange="validatePersonalInformation()" type="text" id="date" name="date">
+                <i class="fas fa-check-circle" id="validatedate" style="color: green;"></i>
+                <i class="fas fa-times-circle" id="nonvalidatedate" style="color: red;"></i>
+              </div>
+             
+            </div>
+          </div> 
+          <div class="termsform">
+            
+          </div>
+          <div class="buttonwrapper">
+            <svg onclick="change()" width="130" height="60" viewBox="0 0 152 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="button">
+              <path id="Polygon3" d="M101 46.465L25.9775 85.8388V7.09116L101 46.465Z" />
+              <g id="Polygon2">
+              <path d="M152 46.4628L76.9788 85.8347L76.9788 7.09086L152 46.4628Z"  style="mix-blend-mode:multiply"/>
+              </g>
+              <g id="Polygon1">
+              <path d="M101 46.4615L25.9775 85.8354L25.9775 7.08768L101 46.4615Z" style="mix-blend-mode:multiply"/>
+              </g>
+              </g>
+              </svg> 
+          </div>
+        </form>
+      </div>
+      
+     
+    </div>
+    
+  </main>
+</body>
+</html>

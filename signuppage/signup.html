@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<script src="https://kit.fontawesome.com/97b9573b54.js" crossorigin="anonymous"></script>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="signupscript.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="signup.css">
+    <title>
+        Welcome
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body class="signuppage">
+      <header class="toppage">
+        <h1>Welcome! Please use the following form to signup to our site!</h1>
+        <br>
+        <br>
+      </header>
+  
+      <div class="signUpForm">
+      <form action="confirmationSignup.html" method="post">
+ 
+        <fieldset>
+          <legend>
+            Login information
+          </legend>
+          
+          <label for="email">Email:</label><br>
+          <input size="50" placeholder="example@mail.com" type="text" id="email" name="email" maxlength=40><br>
+          
+          <label for="pass">Password:</label><br>
+          <input size="50" placeholder="New password" type="password" id="pass" name="pass" maxlength=40><br>
+          
+          <label for="confirmpass">Confirm Password:</label><br>
+          <input size="50" placeholder="New password" type="password" id="confirmpass" name="confirmpass" maxlength=40><br>
+        <br>
+        </fieldset>
+        <fieldset>
+          <legend>Personal data</legend>
+          <label for="fname">First name:</label><br>
+          <input size="40" type="text" id="fname" name="fname" value="John"><br>
+          <br>
+          <label for="lname">Last name:</label><br>
+          <input size="40" type="text" id="lname" name="lname" value="Doe"><br>
+          <br>
+          <label for="phone">Phone number:</label><br>
+          <input type="text" id="phone" name="phone" ><br>
+          <br>
+          <label for="address">Address:</label><br>
+          <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+          <br>
+          <div class="radioButtons">
+            <label>Gender:</label>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input checked type="radio" id="other" name="gender" value="other">
+            <label for="other">Don't want to specify</label><br>
+          </div>
+          <br>
+          <div class="acctype">
+            <label for="acctypeSelect">Account type:</label>
+              <select class="acctypeSelects">
+                <option value="Chef">Chef</option>
+                <option value="Visitator">Visitator</option>
+              </select>
+          </div>
+          <div class="acctype">
+            <label for="judetSelect">Judet:</label>
+            <select id="judetSelect" onchange="onJudetSelect()">
+                <option value="Alba">Alba</option>
+                <option value="Cluj">Cluj</option>
+                <option value="Sibiu">Sibiu</option>
+            </select>
+          </div>
+          <div class="acctype">
+            <label for="orasSelect">Oras</label>
+              <select id="orasSelect">               
+              </select>
+            </label>
+          </div>
+      
+          
+          <div class="favfoodtypes">
+            <h5>Favorite types of food:</h5>
+
+            <input  type="checkbox" id="italian" name="italian" value="italian">
+            <label for="italian"> Italian</label>
+
+            <input type="checkbox" id="greek" name="greek" value="greek">
+            <label for="greek"> Greek</label>
+
+            <input type="checkbox" id="mexican" name="mexican" value="mexican">
+            <label for="mexican"> Mexican</label>
+
+            <input type="checkbox" id="american" name="american" value="american">
+            <label for="american"> American</label>
+
+          </div>
+          
+          <br>
+          <label for="age">Age (between 18 and 100) :</label>
+          <input type="range" id="age" name="age" min="18" max="100">
+          <br>
+          <br>
+        </fieldset>
+        <br>
+  
+      
+        <details>
+            <summary>Terms and conditions</summary>
+          
+          <p>For legal reasons you must respect the following rules and accept the <abbr title="General Data Protection Regulation">GDPR</abbr> when creating a new account:</p>
+          <i class="far fa-frown"></i>
+          <ul>
+            <li>When creating your account you must respect the following:
+            <ol type="1">
+              <li>For personal data you must:
+                <ol type="a" start="2">
+                  <li>Not use bad words or profanity</li>
+                  <li>Not use nicknames because thats how people search you on the app</li>
+                  <li>
+                    <p>For the address you must use the following example</p>
+                    <textarea rows="4" cols="50" readonly>Street X Number X ,City X , Postal Code X</textarea>
+                  </li>
+                  <li>Use your country's specific format for phone numbers</li>
+                </ol>
+              </li>
+              <li>For login information you must:
+                <ol type="i" start="7">
+                  <li>Use an existing email</li>
+                  <li>Choose a strong password that you can remember</li>
+                </ol>
+              </li> 
+            </ol>  
+            </li>
+            <li>For protection of data we follow the GDPR rules:
+              <ol type="I">
+                <li>Please read the <a href="https://gdpr-info.eu/" target="_blank">GDPR Compliance</a> from the oficial site</li>
+                <li>By selecting the checkbox before submitting the form you accept that we can use your data for this site only and not give your data to anyone</li>
+              </ol>
+            </li>
+          </ul>
+        </details>
+       
+        
+        <div class="termscheckbox">
+          <input type="checkbox" id="terms" name="terms" value="accepted">
+          <label for="terms"><b>I accept the terms and conditions above</b></label>
+        </div>
+  
+        <input type="submit" value="Register" >
+        
+      </form>
+    </div>
+  
+      <footer>
+      <p>Author: George Marian <br>
+        <p>All rigths reserved<br>
+        <a href="mailto:mariangeorge99@icloud.com">mariangeorge99@icloud.com</a></p>
+        <div class="Validator">
+          <p>
+            <a href="http://validator.w3.org/check?uri=https%3A%2F%2Fwww.scs.ubbcluj.ro%2F~mgar1992%2Flab1%2Fhtml5%2Fsignup.html" target="_blank"><img
+              src="https://cdn3.iconfinder.com/data/icons/social-1/100/w3-512.png"  height="31" width="88"></a>
+          </p>
+        </div>
+      </footer>
+  </body>
+</html>

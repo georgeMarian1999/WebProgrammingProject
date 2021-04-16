@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body.loginpage,
+body.signuppage {
+  background-image: linear-gradient(to bottom, aqua, cornsilk, bisque);
+}
+body.confirmpage {
+  background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+nav {
+  height: 100%;
+  width: 0;
+  /* margin-top: 10px; */
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #111;
+  overflow-x: hidden;
+  position: fixed;
+  transition: 0.5s;
+}
+nav a {
+  display: block;
+  margin-top: 20px;
+  color: gray;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+nav a.crtpage {
+  color: bisque;
+}
+nav a:hover {
+  color: white;
+}
+.menuButton {
+  top: 10px;
+  float: left;
+  position: absolute;
+  z-index: 0;
+  margin: 20px;
+  color: bisque;
+  font-size: 30px;
+  transition: 0.4s ease-in;
+  padding: 15px;
+}
+.menuButton:hover {
+  transform: scale(1.4);
+}
+.closeButton {
+  margin-left: 20px;
+  top: 0;
+  right: 15px;
+  position: absolute;
+}
+body > footer {
+  display: table-row;
+}
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+body {
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+footer {
+  width: auto;
+  text-align: center;
+  height: 30px;
+}

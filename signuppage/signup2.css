@@ -76,12 +76,18 @@ main {
 .inputWrapper {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 #Polygon3 {
   opacity: 0;
   transform: translateX(-100%);
+}
+select#judetSelect,
+select#orasSelect {
+  width: auto;
+  padding: 10px;
+  height: auto;
 }
 svg:hover #Polygon1 {
   transform: translateX(20%);
@@ -136,8 +142,11 @@ h1 {
     opacity: 1;
   }
 }
+.selects {
+  display: flex;
+  justify-content: space-evenly;
+}
 form {
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -16,8 +16,8 @@ function validateLoginInformation(){
 }
 function validatePersonalInformation(){
   validated=false;
-  var validatedFName=true;
-  var validatedLName=true;
+  var validatedFName=validateLName();
+  var validatedLName=validateFName();
   var validatedPhone=validatePhone();
   console.log(validatedPhone);
   var validatedDate=true;
@@ -65,6 +65,34 @@ function validatePhone(){
   else{
     document.getElementById("validatephone").style.display="none";
     document.getElementById("nonvalidatephone").style.display="flex";
+    return false;
+  }
+}
+function validateFName(){
+  var fname=/^[a-z0-9]+$/;
+  var fnameinput=document.getElementById("fname");
+  if(fnameinput.value!=''&&fnameinput.value.match(fname)){
+    document.getElementById("validatefname").style.display="flex";
+    document.getElementById("nonvalidatefname").style.display="none";
+    return true;
+  }
+  else{
+    document.getElementById("validatefname").style.display="none";
+    document.getElementById("nonvalidatefname").style.display="flex";
+    return false;
+  }
+}
+function validateLName(){
+  var lname=/^[a-z0-9]+$/;
+  var lnameinput=document.getElementById("lname");
+  if(lnameinput.value!=''&&lnameinput.value.match(lname)){
+    document.getElementById("validatelname").style.display="flex";
+    document.getElementById("nonvalidatelname").style.display="none";
+    return true;
+  }
+  else{
+    document.getElementById("validatelname").style.display="none";
+    document.getElementById("nonvalidatelname").style.display="flex";
     return false;
   }
 }

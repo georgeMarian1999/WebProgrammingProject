@@ -52,6 +52,14 @@ header img:hover {
     width: 40%;
   }
 }
+.background {
+  background-image: url(../images/background.svg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .Content {
   display: block;
   width: 100%;
@@ -65,6 +73,10 @@ header img:hover {
   right: 0;
   position: absolute;
   margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   margin-left: auto;
   text-align: center;
   box-shadow: -4px 4px 20px 2px rgba(0, 0, 0, 0.4),
@@ -77,7 +89,7 @@ form {
 }
 .LoginForm input[type="text"],
 .LoginForm input[type="password"] {
-  width: 50%;
+  width: 80%;
   transition: width 0.4s ease-in-out;
   padding: 12px 20px;
   margin: 10px 0;
@@ -90,12 +102,20 @@ hr.solid {
   border-top: 3px solid #bbb;
 }
 .inputField {
-  width: 80%;
+  width: 100%;
   padding: 15px;
+  padding-left: 30px;
   text-align: left;
   margin-bottom: 15px;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   margin-right: 30px;
+}
+h3 {
+  padding: 10px;
 }
 .buttonWrapper {
   width: 100%;
@@ -105,11 +125,11 @@ hr.solid {
   text-align: center;
   margin-bottom: 10px;
 }
-.LoginForm input[type="text"]:focus,
+/* .LoginForm input[type="text"]:focus,
 .LoginForm input[type="password"]:focus {
   width: 100%;
   border-color: forestgreen;
-}
+} */
 .LoginForm input[type="submit"] {
   width: 50%;
   background-color: #4caf50;
@@ -120,7 +140,17 @@ hr.solid {
   border-radius: 4px;
   cursor: pointer;
 }
-.LoginForm input[type="submit"]:hover {
+button {
+  width: 50%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
   background-color: darksalmon;
 }
 img.footerImg {

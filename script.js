@@ -1,7 +1,6 @@
 function openMenu(){
   document.getElementById("navigation").style.width="250px";
   document.getElementsByClassName("Content")[0].style.opacity="0.2";
-  
 }
 function closeMenu(){
   document.getElementById("navigation").style.width="0px";

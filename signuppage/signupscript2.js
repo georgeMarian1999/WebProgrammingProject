@@ -19,9 +19,18 @@ function validatePersonalInformation(){
   var validatedFName=validateLName();
   var validatedLName=validateFName();
   var validatedPhone=validatePhone();
-  console.log(validatedPhone);
-  var validatedDate=true;
+  var selectFormat=document.getElementById("dateFormat");
+  var validatedDate=validateDate(document.getElementById("date").value,selectFormat.options[selectFormat.selectedIndex].value);
   if(validatedFName&&validatedLName&&validatedPhone&&validatedDate){
+    validation();
+  }
+  else {
+    nonvalidation();
+  }
+}
+function validateTermsForm(){
+  validated=false;
+  if(document.getElementById("terms").checked==true){
     validation();
   }
   else {
@@ -81,6 +90,30 @@ function validateFName(){
     document.getElementById("nonvalidatefname").style.display="flex";
     return false;
   }
+}
+function validateDate(date,format){
+  var zzllaaaa=/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/(19|20)\d\d$/;
+  var llzzaaaa=/^(0[1-9]|1[012])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d\d$/;
+  var zzllaa=/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[012])\/([5-9][0-9])$/;
+  if(date.match(zzllaaaa)&&format=='zz/ll/aaaa'){
+    document.getElementById("validatedate").style.display="flex";
+    document.getElementById("nonvalidatedate").style.display="none";
+    return true;
+    
+  }
+  if(date.match(llzzaaaa)&&format=='ll/zz/aaaa'){
+    document.getElementById("validatedate").style.display="flex";
+    document.getElementById("nonvalidatedate").style.display="none";
+    return true;
+  }
+  if(date.match(zzllaa)&&format=='zz/ll/aa'){
+    document.getElementById("validatedate").style.display="flex";
+    document.getElementById("nonvalidatedate").style.display="none";
+    return true;
+  }
+  document.getElementById("validatedate").style.display="none";
+  document.getElementById("nonvalidatedate").style.display="flex";
+  return false;
 }
 function validateLName(){
   var lname=/^[a-z0-9]+$/;
@@ -153,12 +186,66 @@ function change(){
   
     crtdiv.style.display="none";
     crtpage++;
-    if(crtpage>2){
-      crtpage=0;
+    if(crtpage>1){
+      document.getElementById("nextButton").style.display="none";
+      document.getElementById("createButton").style.display="block";
     }
     document.getElementsByClassName(pagesTitles[crtpage])[0].style.display="flex";
     var crtform=document.getElementsByClassName(pagesForms[crtpage])[0];
     crtform.style.display="flex";
     nonvalidation();
 }
+}
+function create(){
+  if(validated==true){
+    location.href="confirmationSignup.html";
+  }
+}
+const judetAlba =["Alba Iulia", "Abrud","Teius"];
+const judetCluj=[ "Cluj-Napoca","Turda","Baciu"];
+const judetSibiu=["Sibiu","Medias","Avrig"];
+var initializare =function(){
+  var orasSelect=document.getElementById("orasSelect");
+  orasSelect.options.length=0;
+  for (var i = 0; i < judetAlba.length; i++) {
+    var optn = judetAlba[i];
+    var el = document.createElement("option");
+    el.textContent = optn;
+    el.value = optn;
+    orasSelect.appendChild(el);
+}};
+document.addEventListener("DOMContentLoaded", initializare);
+function onJudetSelect(){
+  var judet=document.getElementById("judetSelect")
+  var orasSelect=document.getElementById("orasSelect");
+  if(judet.options[judet.selectedIndex].value==="Alba"){
+    orasSelect.options.length=0;
+    for (var i = 0; i < judetAlba.length; i++) {
+      var optn = judetAlba[i];
+      var el = document.createElement("option");
+      el.textContent = optn;
+      el.value = optn;
+      orasSelect.appendChild(el);
+  }
+  } 
+  if(judet.options[judet.selectedIndex].value==="Cluj"){
+    orasSelect.options.length=0;
+    for (var i = 0; i < judetCluj.length; i++) {
+      var optn = judetCluj[i];
+      var el = document.createElement("option");
+      el.textContent = optn;
+      el.value = optn;
+      orasSelect.appendChild(el);
+  }
+  }
+  if(judet.options[judet.selectedIndex].value==="Sibiu"){
+    orasSelect.options.length=0;
+    for (var i = 0; i < judetSibiu.length; i++) {
+      var optn = judetSibiu[i];
+      var el = document.createElement("option");
+      el.textContent = optn;
+      el.value = optn;
+      orasSelect.appendChild(el);
+  }
+  } 
 }

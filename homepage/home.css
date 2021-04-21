@@ -55,6 +55,10 @@ article.content {
   text-align: center;
   padding: 30px;
   margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 }
 article.homecontent {
   width: 100%;

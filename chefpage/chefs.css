@@ -112,63 +112,62 @@ body.chefpage {
     content: "Website";
   }
 }
+@keyframes slideleft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
 .slider {
-  width: 600px;
-  position: relative;
-  /*Padding in loc de height*/
-  padding-top: 320px; /*Pune pozele mici jos*/
-
-  margin-left: 20px;
-  margin-top: 20px;
-
+  width: 50%;
+  height: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
 }
-
-/*Last thing remaining is to add transitions*/
-.slider > img {
+.slider li.sliderimage {
+  display: none;
   width: 100%;
   height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
+  animation: slideleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  padding: 20px;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
   transition: all 0.5s;
 }
-
-.slider input[name="slideswitch"] {
-  display: none;
+.slidercontrol {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
-
-.slider label {
-  /* spatiere */
-  margin: 18px 0 0 18px;
-  border: 3px solid #999;
-  background-color: white;
-  float: left;
-  cursor: pointer;
-  transition: all 0.5s;
-
-  opacity: 0.6;
+.slidercontrol button {
+  text-align: center;
+  color: red;
+  width: 30%;
+  border: palegoldenrod;
+  font-size: large;
+  padding: 10px;
 }
-
-.slider label img {
-  display: block;
+.slidercontrol input {
+  width: 12%;
+  height: 5%;
+  padding: 10px;
 }
-
-.slider input[name="slideswitch"]:checked + label {
-  border-color: bisque;
-  opacity: 1;
+.slidercontrol label {
+  font-size: large;
 }
-/*Daca se face click pe o imagine mica i se schimba opacitatea*/
-
-.slider input[name="slideswitch"] ~ img {
-  opacity: 0;
-  transform: scale(1.1);
-}
-/*By default toate imaginile sunt una peste alta doar ca au opacitate 0 si size 110%
-*/
-.slider input[name="slideswitch"]:checked + label + img {
-  opacity: 1;
-  transform: scale(1);
-}
-/*Cand se face click pe o imagine mica imaginea care este fiu al elementului input isi va face opacitatea 1*/

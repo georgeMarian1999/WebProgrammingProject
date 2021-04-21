@@ -4,6 +4,7 @@
    <head>
       <link rel="stylesheet" href="../style.css">
       <link rel="stylesheet" href="chefs.css">
+      <script type="text/javascript" src="./chef.js"></script>
       <link rel="stylesheet" href="../homepage/home.css">
       <script type="text/javascript" src="../script.js"></script>
       <title>
@@ -35,34 +36,23 @@
             </div>
           </article>   
           <article class="content">
-             <header><h1><p class="p3">Top chefs around the world!</p></h1></header>
-            <div class="slider">
-               <input type="radio" name="slideswitch" id="id1" checked="checked"/>
-               <label for="id1">
-                  <img src="../images/mauro.jpeg" width="100"/>
-                  <p class="p3">Mauro </p>
-                  <p class="p3">Colagreco</p>
-               </label>
-               <img src="../images/mauro.jpeg"/>
-               
-               <input type="radio" name="slideswitch" id="id2" />
-               <label for="id2">
-                  <img src="images/christophe.jpeg" width="100"/>
-                  <p class="p3">Christophe</p>
-                  <p class="p3">Bacquié</p>
-                  
-               </label>
-               <img src="../images/christophe.jpeg"/>
-               
-               <input type="radio" name="slideswitch" id="id3"/>
-               <label for="id3">
-                  <img src="../images/arnaud.jpeg" width="100"/>
-                  <p class="p3">Arnaud</p>
-               <p class="p3">Donckele</p>
-               </label>
-               <img src="../images/arnaud.jpeg"/>
-            
-            </div>     
+            <header><h1><p class="p3">Top chefs around the world!</p></h1></header>
+            <ul class="slider" id="sliderul">
+              <li class="sliderimage">
+               <img src="../images/mauro.jpeg" alt="mauro">
+              </li>
+              <li class="sliderimage">
+               <img src="../images/christophe.jpeg" alt="christophe">
+              </li> 
+              <li class="sliderimage">
+               <img src="../images/arnaud.jpeg" alt="arnaud">
+              </li> 
+            </ul> 
+            <div class="slidercontrol">
+               <button onclick="changeButton()" id="sliderbttn">Pause</button>
+               <label for="interval">Seconds</label>
+               <input onchange="changeSeconds()" type="text" id="interval" name="interval">
+            </div>    
           </article>
       <article class="content">
         <h1><p class="p3" style="color: black;">Our <span title="Certified Professional Chefs">CPC</span> chefs</p></h1>

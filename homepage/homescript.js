@@ -56,7 +56,7 @@ function changeRecipeJQ(){
     slideindexJQ=$listItems.length-1;
   }
   $listItems.eq(slideindexJQ).slideDown();
-  timeJQ=setTimeout(changeRecipeJQ,5000);
+  timeJQ=setTimeout(changeRecipeJQ,3000);
 }
 $(function() {
   changeRecipeJQ();

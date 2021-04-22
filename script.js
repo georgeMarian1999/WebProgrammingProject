@@ -83,6 +83,5 @@ function sortTable(instance,column,type){
       sortedData.sort(compareDescText);
     }
   }
-  
   newValTable(sortedData,instance);
 }

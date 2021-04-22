@@ -141,6 +141,9 @@ body.chefpage {
   animation-timing-function: ease-in;
   padding: 20px;
 }
+th {
+  cursor: pointer;
+}
 .slider img {
   width: 100%;
   height: 100%;

@@ -64,7 +64,6 @@ article.homecontent {
   width: 100%;
   position: relative;
   padding: 30px;
-  margin-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -80,26 +79,47 @@ div.gallerywrapper {
   margin: 2rem;
   background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
 }
-div.gallerywrapper div.nextButton a {
+div.gallerywrapperJQ {
+  width: 65%;
+  border-radius: 10px;
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+  padding: 5px;
+  margin: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+div.recipecontentJQ {
+  background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  padding: 20px;
+}
+div.gallerywrapperJQ a {
   color: black;
 }
-div.gallerywrapper div.previousButton a {
+div.gallerywrapper a {
   color: black;
 }
-div.gallerywrapper div.nextButton {
+div.gallerywrapper div.nextButton,
+div.nextButtonJQ {
   position: absolute;
   color: black;
   font-size: 25px;
   bottom: 20px;
   right: 35px;
 }
-div.gallerywrapper div.previousButton {
+div.gallerywrapper div.previousButton,
+div.previousButtonJQ {
   position: absolute;
   font-size: 25px;
   bottom: 20px;
   left: 35px;
 }
-div.gallerywrapper ul.recipeslider {
+div.gallerywrapper ul.recipeslider,
+ul.recipesliderJQ {
   position: relative;
   display: flex;
   text-align: center;
@@ -117,7 +137,8 @@ div.gallerywrapper ul.recipeslider {
     opacity: 1;
   }
 }
-ul.recipeslider li {
+ul.recipeslider li,
+ul.recipesliderJQ li {
   animation-name: fade;
   animation-duration: 1s;
   display: none;
@@ -126,13 +147,16 @@ ul.recipeslider li {
   border-color: black;
   border-style: solid;
 }
-div.gallerywrapper div.recipecontent a {
+div.gallerywrapper div.recipecontent a,
+div.recipecontentJQ a {
   color: black;
   text-decoration: none;
 }
-div.gallerywrapper ul.recipeslider li div.recipecontent {
+div.gallerywrapper ul.recipeslider li div.recipecontent,
+div.gallerywrapper ul.recipesliderJQ li div.recipecontentJQ {
   padding: 10px;
   margin: 5px;
+  width: 100%;
   opacity: 1;
 }
 div.gallery {
@@ -242,7 +266,7 @@ table th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: bisque;
+  background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
   color: black;
 }
 button.sortButton {

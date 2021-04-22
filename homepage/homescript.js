@@ -41,5 +41,32 @@ function changeRecipe(){
   slideindex++;
   if(slideindex>=listItems.length) { slideindex=0;}
   listItems[slideindex].style.display="block";
-  time=setTimeout(changeRecipe,3000);
+  time=setTimeout(changeRecipe,5000);
 }
+var slideindexJQ=-1;
+var timeJQ;
+function changeRecipeJQ(){
+  var $listItems=$("li.listItemJQ");
+  $listItems.hide();
+  slideindexJQ++;
+  if(slideindexJQ>=$listItems.length){
+    slideindexJQ=0;
+  }
+  if(slideindexJQ<0){
+    slideindexJQ=$listItems.length-1;
+  }
+  $listItems.eq(slideindexJQ).slideDown();
+  timeJQ=setTimeout(changeRecipeJQ,5000);
+}
+$(function() {
+  changeRecipeJQ();
+  $("div.nextButtonJQ").click(function(){
+    clearTimeout(timeJQ);
+    changeRecipeJQ();
+  })
+  $("div.previousButtonJQ").click(function(){
+    clearTimeout(timeJQ);
+    slideindexJQ=slideindexJQ-2;
+    changeRecipeJQ();
+  })
+}); 

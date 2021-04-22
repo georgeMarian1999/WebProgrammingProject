@@ -1,18 +1,34 @@
 var time;
 var defaultms=3000;
-var index=0;
+var index=-1;
+var repeated=false
 function changeImage(){
   var list=document.getElementsByClassName("sliderimage");
-  
-  for(var i=0;i<list.length;i++){
-    list[i].style.display="none";
+  console.log(index);
+  console.log(list.length);
+  if(index<list.length){
+    for(var i=0;i<list.length;i++){
+      list[i].style.display="none";
+    }
+  }
+  if(index==list.length-1&&repeated==false){
+    list[index].style.display="flex"
   }
   index++;
-  if(index>list.length-1){
+  if(index>list.length-1&&repeated){
     index=0;
+    list[list.length-1].style.display="none";
   }
-  list[index].style.display="flex";
-  time=setTimeout(changeImage,defaultms);
+  if(index<list.length) {
+    list[index].style.display="flex";
+  }
+  time=setTimeout(changeImage,defaultms)
+}
+function repeat(){
+  if(document.getElementById("repeat").checked==true){
+    repeated=true;
+  }
+  else repeated=false;
 }
 function play(){
   time=setTimeout(changeImage,defaultms);

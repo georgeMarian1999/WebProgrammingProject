@@ -51,6 +51,8 @@
             </ul> 
             <div class="slidercontrol">
                <button onclick="changeButton()" id="sliderbttn">Pause</button>
+               <label for="repeat">Repeat slideshow?:</label>
+               <input onchange="repeat()" type="checkbox" id="repeat" name="repeat">
                <label for="interval">Seconds</label>
                <input onchange="changeSeconds()" type="text" id="interval" name="interval">
             </div>    

@@ -171,6 +171,10 @@ th {
   height: 5%;
   padding: 10px;
 }
+.slidercontrol input[type="checkbox"] {
+  border: black;
+  height: 20px;
+}
 .slidercontrol label {
   font-size: large;
 }

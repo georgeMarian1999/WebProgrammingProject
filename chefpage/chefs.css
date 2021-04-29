@@ -150,7 +150,7 @@ th {
   transition: all 0.5s;
 }
 .slidercontrol {
-  width: 50%;
+  width: 80%;
   height: 100%;
   text-align: left;
   margin: 30px;
@@ -161,7 +161,8 @@ th {
 .slidercontrol button {
   text-align: center;
   color: red;
-  width: 30%;
+  width: 20%;
+  cursor: pointer;
   border: palegoldenrod;
   font-size: large;
   padding: 10px;
@@ -177,4 +178,68 @@ th {
 }
 .slidercontrol label {
   font-size: large;
+}
+article.slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+.containerSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  left: 640px;
+}
+.containerSlide .slide {
+  height: 20rem;
+  width: 20rem;
+  position: relative;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  transition: 1s;
+}
+.containerSlide .slide img,
+.containerSlide .slide video {
+  height: 100%;
+  width: 100%;
+}
+
+.containerSlide .slide.active {
+  z-index: 3;
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+.containerSlide .slide.prev,
+.containerSlide .slide.next {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+.containerSlide .slide.prevHidden,
+.containerSlide .slide.nextHidden {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+  display: none;
+}
+
+#slidenext,
+#slideprev {
+  color: green;
 }

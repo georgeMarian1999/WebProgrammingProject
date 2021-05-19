@@ -1,0 +1,279 @@
+aside p {
+  border-radius: 30px;
+  background-color: white;
+}
+h2.asideTitle {
+  width: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  font-style: oblique;
+  background-color: white;
+}
+@keyframes asidesweep {
+  0% {
+    opacity: 0;
+    margin-right: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0px;
+  }
+}
+@keyframes articlesweep {
+  0% {
+    opacity: 0;
+    margin-bottom: -30px;
+  }
+  50% {
+    opacity: 0.5;
+    margin-bottom: -15px;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 0px;
+  }
+}
+footer.homepagefooter {
+  background-color: gray;
+}
+article.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  padding: 2rem;
+  width: 100%;
+  animation: articlesweep 1s ease-in;
+  padding: 10px;
+  text-align: center;
+}
+
+article.content {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+article.homecontent {
+  width: 100%;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+div.gallerywrapper {
+  width: 65%;
+  border-radius: 10px;
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+  padding: 5px;
+  margin: 2rem;
+  background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+}
+div.gallerywrapperJQ {
+  width: 65%;
+  border-radius: 10px;
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+  padding: 5px;
+  margin: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.2)
+  );
+}
+div.recipecontentJQ {
+  background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  padding: 20px;
+}
+div.gallerywrapperJQ a {
+  color: black;
+}
+div.gallerywrapper a {
+  color: black;
+}
+div.gallerywrapper div.nextButton,
+div.nextButtonJQ {
+  position: absolute;
+  color: black;
+  font-size: 25px;
+  bottom: 20px;
+  right: 35px;
+}
+div.gallerywrapper div.previousButton,
+div.previousButtonJQ {
+  position: absolute;
+  font-size: 25px;
+  bottom: 20px;
+  left: 35px;
+}
+div.gallerywrapper ul.recipeslider,
+ul.recipesliderJQ {
+  position: relative;
+  display: flex;
+  text-align: center;
+  margin-top: 0;
+  padding-left: 2px;
+  list-style-type: none;
+}
+@keyframes fade {
+  from {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+ul.recipeslider li,
+ul.recipesliderJQ li {
+  animation-name: fade;
+  animation-duration: 1s;
+  display: none;
+  margin: 25px;
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+}
+div.gallerywrapper div.recipecontent a,
+div.recipecontentJQ a {
+  color: black;
+  text-decoration: none;
+}
+div.gallerywrapper ul.recipeslider li div.recipecontent,
+div.gallerywrapper ul.recipesliderJQ li div.recipecontentJQ {
+  padding: 10px;
+  margin: 5px;
+  width: 100%;
+  opacity: 1;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 100px;
+}
+div.gallery:hover {
+  position: relative;
+}
+div.gallery:hover .hidden {
+  opacity: 1;
+}
+div.gallery .hidden {
+  display: block;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  padding: auto;
+  bottom: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+div.gallery img {
+  width: 100%;
+  height: 130px;
+}
+
+div.desc {
+  background-color: white;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+}
+body.homepage {
+  width: 100%;
+  background-image: url(../images/desktopback.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+aside.right {
+  animation: asidesweep 1s ease-in-out;
+  width: 30%;
+  float: right;
+  height: max-content;
+  border-radius: 50%;
+  padding-left: 15px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-bottom: 50px;
+  font-style: italic;
+  text-align: center;
+  background-image: url("../images/asideCover.jpeg");
+  background-repeat: no-repeat;
+}
+@keyframes menusweep {
+  0% {
+    opacity: 0;
+    margin-left: -30px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+h1 {
+  color: white;
+}
+.intro {
+  background-color: black;
+  width: 65%;
+  margin: 2rem;
+  height: auto;
+  padding: 5px;
+}
+figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+table {
+  font-family: "Lucida Console", "Courier New", monospace;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px;
+}
+table img {
+  max-width: 100%;
+  height: auto;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+table tr {
+  background-color: #f2f2f2;
+}
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+  color: black;
+}
+button.sortButton {
+  /* display: none; */
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}

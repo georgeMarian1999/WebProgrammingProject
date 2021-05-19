@@ -29,6 +29,9 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
+form.hide-submit input[type="submit"] {
+  display: none;
+}
 .information,
 .personal,
 .terms {

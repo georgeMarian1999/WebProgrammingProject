@@ -34,7 +34,7 @@
         <h1>Terms of conditions</h1>
       </div>
       <div class="form"> 
-        <form action="confirmationSignup.html" method="post">
+        <form action="register.php" class="hide-submit"  method="post">
           <div class="informationform">
             <div class="auxiliar">
             <label for="email">Email:</label>
@@ -54,6 +54,13 @@
                 <input size="50" onchange="validateLoginInformation()" placeholder="New password" type="password" id="confirmpass" name="confirmpass" maxlength=40>
                 <i class="fas fa-eye" onclick="showConfirmPassword()" id="showconfirm" style="color: red;" ></i>
                 <i class="fas fa-eye-slash" onclick="hideConfirmPassword()" id="hideconfirm" style="display: none; color: red;"></i>
+              </div>
+              <div class="inputWrapper">
+                <label for="accType">Account type:</label>
+                <select id="accType" name="accType" onchange="validateLoginInformation()">
+                  <option>User</option>
+                  <option>Chef</option>
+                </select>
               </div>
             </div>
           </div>
@@ -83,7 +90,7 @@
               <div class="inputWrapper">
                 <input onchange="validatePersonalInformation()" type="text" id="date" name="date">
                 <label for="dateFormat">Format:</label>
-                <select id="dateFormat" onchange="validatePersonalInformation()">
+                <select id="dateFormat" name="dateFormat" onchange="validatePersonalInformation()">
                   <option>zz/ll/aaaa</option>
                   <option>ll/zz/aaaa</option>
                   <option>zz/ll/aa</option>
@@ -94,7 +101,7 @@
               <div class="inputWrapper">
                 <div class="selects">
                   <label for="judetSelect">County:</label>
-                    <select id="judetSelect" onchange="onJudetSelect()">
+                    <select id="judetSelect" name="judetSelect" onchange="onJudetSelect()">
                       <option value="Alba">Alba</option>
                       <option value="Cluj">Cluj</option>
                       <option value="Sibiu">Sibiu</option>
@@ -102,7 +109,7 @@
                 </div>
                 <div class="selects">
                   <label for="orasSelect">City:</label>
-                  <select id="orasSelect">               
+                  <select id="orasSelect" name="orasSelect">               
                   </select>
                 </div>
               </div>
@@ -140,6 +147,19 @@
                 <input onchange="validateTermsForm()" type="checkbox" id="terms" name="terms" value="accepted">
                 <label for="terms"><b>I accept the terms and conditions above</b></label>
               </div>
+              <button id="submitButton" type="submit">
+                <svg  id="createButton" width="130" height="60" viewBox="0 0 211 143" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="ButtonCreateAcc">
+                  <g id="circle">
+                  <ellipse id="wrapper" cx="105.5" cy="71.5" rx="105.5" ry="71.5"/>
+                  </g>
+                  <g id="ConfirmSign">
+                  <rect id="Rectangle1" x="72.1406" y="69" width="47" height="19" transform="rotate(35.8982 72.1406 69)" />
+                  <rect id="Rectangle2" x="133.089" y="33.2349" width="19" height="66" transform="rotate(35.9726 133.089 33.2349)"/>
+                  </g>
+                  </g>
+                </svg>
+              </button> 
             </div>
           </div>
           <div class="buttonwrapper">
@@ -154,25 +174,13 @@
               </g>
               </g>
             </svg>
-            <svg onclick="create()" id="createButton" width="130" height="60" viewBox="0 0 211 143" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g id="ButtonCreateAcc">
-              <g id="circle">
-              <ellipse id="wrapper" cx="105.5" cy="71.5" rx="105.5" ry="71.5"/>
-              </g>
-              <g id="ConfirmSign">
-              <rect id="Rectangle1" x="72.1406" y="69" width="47" height="19" transform="rotate(35.8982 72.1406 69)" />
-              <rect id="Rectangle2" x="133.089" y="33.2349" width="19" height="66" transform="rotate(35.9726 133.089 33.2349)"/>
-              </g>
-              </g>
-              </svg>
-               
+            
           </div>
         </form>
       </div>
       
-     
     </div>
-    
+    </section>
   </main>
 </body>
 </html>

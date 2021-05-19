@@ -1,0 +1,245 @@
+body.chefpage {
+  width: 100%;
+  /* height: 400px; */
+  background-image: url(../images/chefbackground.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: block;
+}
+.container {
+  position: relative;
+  width: 30%;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008cba;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    text-align: right;
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  table.recipetable td:nth-of-type(1):before {
+    content: "Recipe";
+  }
+  table.recipetable td:nth-of-type(2):before {
+    content: "Cook time(min)";
+  }
+  table.recipetable td:nth-of-type(3):before {
+    content: "Chef";
+  }
+  table.recipetable td:nth-of-type(4):before {
+    content: "Category";
+  }
+  table.recipetable td:nth-of-type(5):before {
+    content: "Link";
+  }
+  table.cheftable td:nth-of-type(1):before {
+    content: "Photo";
+  }
+  table.cheftable td:nth-of-type(2):before {
+    content: "Phone number";
+  }
+  table.cheftable td:nth-of-type(3):before {
+    content: "Website";
+  }
+}
+@keyframes slideleft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slider {
+  width: 50%;
+  height: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+.slider li.sliderimage {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: slideleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  padding: 20px;
+}
+th {
+  cursor: pointer;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+.slidercontrol {
+  width: 80%;
+  height: 100%;
+  text-align: left;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.slidercontrol button {
+  text-align: center;
+  color: red;
+  width: 20%;
+  cursor: pointer;
+  border: palegoldenrod;
+  font-size: large;
+  padding: 10px;
+}
+.slidercontrol input {
+  width: 12%;
+  height: 5%;
+  padding: 10px;
+}
+.slidercontrol input[type="checkbox"] {
+  border: black;
+  height: 20px;
+}
+.slidercontrol label {
+  font-size: large;
+}
+article.slider {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 100px;
+  align-items: center;
+}
+.containerSlide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  left: 640px;
+}
+.containerSlide .slide {
+  height: 20rem;
+  width: 20rem;
+  position: relative;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+  pointer-events: none;
+  transition: 1s;
+}
+.containerSlide .slide img,
+.containerSlide .slide video {
+  height: 100%;
+  width: 100%;
+}
+
+.containerSlide .slide.active {
+  z-index: 3;
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+.containerSlide .slide.prev,
+.containerSlide .slide.next {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
+.containerSlide .slide.prevHidden,
+.containerSlide .slide.nextHidden {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+  display: none;
+}
+
+#slidenext,
+#slideprev {
+  color: green;
+}
